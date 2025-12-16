@@ -86,13 +86,13 @@ Modern e-commerce businesses face critical challenges in order processing: manua
 
 4. **Check data loaded**
 ```sql
-SELECT table_name, COUNT(*) as row_count 
+SELECT CUSTOMERS, COUNT(*) as row_count 
 FROM (
   SELECT 'CUSTOMERS' as table_name FROM CUSTOMERS
   UNION ALL SELECT 'PRODUCTS' FROM PRODUCTS
   UNION ALL SELECT 'ORDERS' FROM ORDERS
 ) 
-GROUP BY table_name;
+GROUP BY CUSTOMERS;
 ```
 
 ---
