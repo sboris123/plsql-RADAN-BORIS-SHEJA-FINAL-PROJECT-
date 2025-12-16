@@ -99,18 +99,35 @@ GROUP BY CUSTOMERS;
 
 ## 📊 Sample Usage
 
-### Place an Order
+### Place Order Procedure (Success Case)
 ```sql
 DECLARE
+    v_customer_id NUMBER;
+    v_product_id NUMBER;
+    v_user_id NUMBER;
     v_order_id NUMBER;
     v_status VARCHAR2(100);
     v_message VARCHAR2(500);
 BEGIN
+    -- Get valid test data
+    SELECT customer_id INTO v_customer_id 
+    FROM CUSTOMERS 
+    WHERE customer_status = 'Active' AND ROWNUM = 1;
+    
+    SELECT product_id INTO v_product_id 
+    FROM PRODUCTS 
+    WHERE product_status = 'Available' AND stock_quantity > 10 AND ROWNUM = 1;
+    
+    SELECT user_id INTO v_user_id 
+    FROM USER_ACCOUNTS 
+    WHERE account_status = 'Active' AND role = 'Sales' AND ROWNUM = 1;
+    
+    -- Place order
     sp_place_order(
-        p_customer_id => 1001,
-        p_product_id => 2001,
-        p_quantity => 5,
-        p_user_id => 3001,
+        p_customer_id => v_customer_id,
+        p_product_id => v_product_id,
+        p_quantity => 2,
+        p_user_id => v_user_id,
         p_order_id => v_order_id,
         p_status => v_status,
         p_message => v_message
@@ -118,30 +135,51 @@ BEGIN
     
     DBMS_OUTPUT.PUT_LINE('Status: ' || v_status);
     DBMS_OUTPUT.PUT_LINE('Message: ' || v_message);
-    DBMS_OUTPUT.PUT_LINE('Order ID: ' || v_order_id);
+    
+    IF v_status = 'SUCCESS' THEN
+        DBMS_OUTPUT.PUT_LINE('✓ Order placed successfully. Order ID: ' || v_order_id);
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('✗ Order placement failed');
+    END IF;
 END;
 /
+
 ```
 
-### Process Payment
+### Process Payment Procedure
 ```sql
 DECLARE
+    v_order_id NUMBER;
+    v_user_id NUMBER;
+    v_amount NUMBER;
     v_transaction_id NUMBER;
     v_status VARCHAR2(100);
     v_message VARCHAR2(500);
 BEGIN
+    -- Get an order with pending payment
+    SELECT order_id, total_amount INTO v_order_id, v_amount
+    FROM ORDERS 
+    WHERE payment_status = 'Pending' AND ROWNUM = 1;
+    
+    SELECT user_id INTO v_user_id FROM USER_ACCOUNTS WHERE ROWNUM = 1;
+    
+    -- Process payment
     sp_process_payment(
-        p_order_id => 4001,
+        p_order_id => v_order_id,
         p_payment_method => 'Credit Card',
-        p_amount => 118000,
-        p_user_id => 3005,
+        p_amount => v_amount,
+        p_user_id => v_user_id,
         p_transaction_id => v_transaction_id,
         p_status => v_status,
         p_message => v_message
     );
     
-    DBMS_OUTPUT.PUT_LINE('Transaction ID: ' || v_transaction_id);
     DBMS_OUTPUT.PUT_LINE('Status: ' || v_status);
+    DBMS_OUTPUT.PUT_LINE('Message: ' || v_message);
+    
+    IF v_status = 'SUCCESS' THEN
+        DBMS_OUTPUT.PUT_LINE('✓ Payment processed. Transaction ID: ' || v_transaction_id);
+    END IF;
 END;
 /
 ```
@@ -152,8 +190,8 @@ SELECT
     customer_name,
     city,
     total_spent,
-    order_count,
-    spending_rank
+    spending_rank,
+    ROUND(percentile * 100, 2) || '%' AS percentile_rank
 FROM vw_customer_rankings
 WHERE ROWNUM <= 10
 ORDER BY spending_rank;
@@ -164,7 +202,8 @@ ORDER BY spending_rank;
 ## 📸 Screenshots
 
 ### Database Structure
-![ER Diagram](screenshots/database_structure/er_diagram.png)
+![ER Diagram]<img width="4539" height="2615" alt="er diagram" src="https://github.com/user-attachments/assets/f020d98d-d9db-40aa-9af3-cd647e59206e" />
+
 ![Table Structure](screenshots/database_structure/tables_view.png)
 
 ### Sample Data
