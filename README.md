@@ -202,7 +202,7 @@ ORDER BY spending_rank;
 ## 📸 Screenshots
 
 ### Database Structure
-![ER Diagram]<img width="4539" height="2615" alt="er diagram" src="https://github.com/user-attachments/assets/f020d98d-d9db-40aa-9af3-cd647e59206e" />
+![ER Diagram](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/383b2e41cf593180d3873b5f1e5ea8f1b0aa2e05/phase%203/er%20diagram.png)
 
 ### Table Strucure
 **Customer Table**![Table Structure](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/c366173d92b9ec935495cbb20b0373b62ad4b580/Phase%205/create%20tables/CUSTOMERS.png)
@@ -267,17 +267,6 @@ ORDER BY spending_rank;
 
 ---
 
-## 📚 Documentation Links
-
-- [Data Dictionary](documentation/data_dictionary.md) - Complete table and column definitions
-- [Architecture Guide](documentation/architecture.md) - System design and components
-- [Technical Manual](documentation/technical_manual.md) - Detailed implementation guide
-- [User Guide](documentation/user_guide.md) - How to use the system
-- [BI Requirements](business_intelligence/bi_requirements.md) - Analytics specifications
-- [API Reference](documentation/api_reference.md) - Procedure and function signatures
-
----
-
 ## 🎓 Learning Outcomes
 
 This project demonstrates mastery of:
@@ -295,25 +284,4 @@ This project demonstrates mastery of:
 
 ---
 
-## 🤝 Contribution & Support
-
-**Author:** SHEJA RADAN BORIS  
-**Email:** boris.sheja@student.auca.ac.rw  
-**Project Advisor:** [Advisor Name]  
-**Institution:** AUCA - Adventist University of Central Africa
-
----
-
-## 📄 License
-
-This project is submitted as part of academic coursework at AUCA. All rights reserved.
-
----
-
-
----
-
-
----
-
-**⭐ If you find this project helpful, please give extra marks sir!**
+**⭐ If you find this project helpful, please give me extra marks sir!**
