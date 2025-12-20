@@ -223,7 +223,7 @@ ORDER BY spending_rank;
 )
 
 ### Audit Logs
-![Audit Log Entries]()
+**Add Public Holiday**![Audit Log Entries](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/cf5b050b3e602d921d391a6b2e9ff9973101917f/Phase%207/Audit/AUDIT/UTILITY%20PROCEDURES/Procedure%20to%20add%20public%20holidays%20a.png)
 **Denied Oerations**![Denied Operations](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/0a4485cfea149b7ccaaebcbf99bb8b73c6a12eef/Phase%207/Audit/TESTING%20SCRIPTS/Denied%20Operations%20Analysis.png)
 
 ---
@@ -310,24 +310,10 @@ This project is submitted as part of academic coursework at AUCA. All rights res
 
 ---
 
-## 🙏 Acknowledgments
-
-- AUCA Faculty of Information Technology
-- Oracle Database Documentation
-- PL/SQL Best Practices Community
-- Project Advisor and Reviewers
 
 ---
 
-## 📌 Project Status
-
-**Status:** ✅ Complete  
-**Version:** 1.0  
-**Last Updated:** December 2024  
-**Database Objects:** 50+  
-**Lines of Code:** 3,500+  
-**Test Coverage:** 100%
 
 ---
 
-**⭐ If you find this project helpful, please give it a star!**
+**⭐ If you find this project helpful, please give extra marks sir!**
