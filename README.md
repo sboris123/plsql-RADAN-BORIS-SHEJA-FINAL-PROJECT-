@@ -66,9 +66,9 @@ Modern e-commerce businesses face critical challenges in order processing: manua
 - Minimum 500MB database space
 
 2. **Execute scripts in order**
-```sql
+
 **Create Database Objects**
-![Data Dictionary](Phase5/Create tables.sql)
+[Data Dictionary](Phase 5/Create tables.sql)
    - [Create tables](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/0721051d6f5988343ec57f7a189698a752722e05/Phase%205/Create%20sequence.sql)
    - [02_create_sequences.sql](database/scripts/02_create_sequences.sql)
    - [03_create_indexes.sql](database/scripts/03_create_indexes.sql)
@@ -78,7 +78,7 @@ Modern e-commerce businesses face critical challenges in order processing: manua
 @database/scripts/07_packages.sql
 @database/scripts/08_triggers.sql
 @database/scripts/09_views.sql
-```
+
 
 3. **Verify installation**
 ```sql
