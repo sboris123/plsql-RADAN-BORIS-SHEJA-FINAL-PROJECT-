@@ -67,7 +67,7 @@ Modern e-commerce businesses face critical challenges in order processing: manua
 
 2. **Execute scripts in order**
 ```sql
-@database/scripts/01_create_tables.sql
+Phase 5/Create tables.sql
 
 @database/scripts/02_create_sequences.sql
 @database/scripts/03_create_indexes.sql
