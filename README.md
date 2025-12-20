@@ -197,16 +197,16 @@ ORDER BY spending_rank;
 ### Database Structure
 ![ER Diagram](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/383b2e41cf593180d3873b5f1e5ea8f1b0aa2e05/phase%203/er%20diagram.png)
 
-### Table Strucure
+### Table Structure
 **Customer Table**![Table Structure](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/c366173d92b9ec935495cbb20b0373b62ad4b580/Phase%205/create%20tables/CUSTOMERS.png)
 **Product Table**![Table Structure](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/c449755a86c30753244f39643a16fb8866ac15ab/Phase%205/create%20tables/PRODUCTS.png)
 ### Sample Data
 **Customer Data**![Customer Data](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/a386f92d9bab3abcafe2e96b4406ac406a3d3e2f/Phase%205/insert%20realistic%20record/Insert%20CUSTOMERS.png)
-**Product Data**![screenshots/database_structure/sample_products.png](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/c7415626b38582bec19e0e8076cc3b96a5a3a5bb/Phase%205/insert%20realistic%20record/PRODUCTS%20%20a.png))
+**Product Data**![screenshots/database_structure/sample_products.png](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/c7415626b38582bec19e0e8076cc3b96a5a3a5bb/Phase%205/insert%20realistic%20record/PRODUCTS%20%20a.png)
 
 ### PL/SQL Objects
-**Procedures**![Procedures](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/2df0f82352edadfa2d05d0ff2af8fedfec6478ab/phase%206/procedures/Procedure%205%20a%20Restock%20Product%20Bulk%20Operation%20with%20Cursor.png
-)
+**Procedures**![Procedures](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/2df0f82352edadfa2d05d0ff2af8fedfec6478ab/phase%206/procedures/Procedure%205%20a%20Restock%20Product%20Bulk%20Operation%20with%20Cursor.png)
+
 **Triggers**![Triggers](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/2df0f82352edadfa2d05d0ff2af8fedfec6478ab/phase%206/Triggers/Trigger%201%20Auto-update%20product%20status%20based%20on%20stock.png)
 
 ### Test Results
