@@ -204,11 +204,12 @@ ORDER BY spending_rank;
 ### Database Structure
 ![ER Diagram]<img width="4539" height="2615" alt="er diagram" src="https://github.com/user-attachments/assets/f020d98d-d9db-40aa-9af3-cd647e59206e" />
 
-**Table Strucure**![Table Structure](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/c366173d92b9ec935495cbb20b0373b62ad4b580/Phase%205/create%20tables/CUSTOMERS.png)
-
+### Table Strucure
+**Customer Table**![Table Structure](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/c366173d92b9ec935495cbb20b0373b62ad4b580/Phase%205/create%20tables/CUSTOMERS.png)
+**Product Table**
 ### Sample Data
 **Customer Data**![Customer Data](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/a386f92d9bab3abcafe2e96b4406ac406a3d3e2f/Phase%205/insert%20realistic%20record/Insert%20CUSTOMERS.png)
-![Product Data](screenshots/database_structure/sample_products.png)
+**Product Data**([screenshots/database_structure/sample_products.png](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/c7415626b38582bec19e0e8076cc3b96a5a3a5bb/Phase%205/insert%20realistic%20record/PRODUCTS%20%20a.png))
 
 ### PL/SQL Objects
 ![Procedures](screenshots/database_structure/procedures_list.png)
