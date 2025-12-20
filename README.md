@@ -207,7 +207,7 @@ ORDER BY spending_rank;
 ![Table Structure]
 
 ### Sample Data
-![Customer Data](screenshots/database_structure/sample_customers.png)
+![Customer Data]Phase 5/create tables/CUSTOMERS.png
 ![Product Data](screenshots/database_structure/sample_products.png)
 
 ### PL/SQL Objects
