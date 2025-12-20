@@ -1,9 +1,6 @@
 # Data Dictionary - Automated Customer Order Validation System
 
 **Project:** Order Validation System  
-**Author:** SHEJA RADAN BORIS (29096)  
-**Database:** Oracle 19c  
-**Last Updated:** December 2024
 
 ---
 
@@ -537,7 +534,3 @@
 5. **Recovery Time Objective (RTO):** 4 hours
 
 ---
-
-**Document Version:** 1.0  
-**Last Reviewed:** December 2024  
-**Next Review:** March 2025
