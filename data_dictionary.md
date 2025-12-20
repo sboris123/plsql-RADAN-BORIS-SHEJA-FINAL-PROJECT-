@@ -537,7 +537,3 @@
 5. **Recovery Time Objective (RTO):** 4 hours
 
 ---
-
-**Document Version:** 1.0  
-**Last Reviewed:** December 2024  
-**Next Review:** March 2025
