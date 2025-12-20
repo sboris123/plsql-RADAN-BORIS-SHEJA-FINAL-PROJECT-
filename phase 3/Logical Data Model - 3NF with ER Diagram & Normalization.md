@@ -11,9 +11,8 @@
 2. [Normalization Process](#normalization-process)
 3. [Detailed Entity Specifications](#detailed-entity-specifications)
 4. [Relationship Matrix](#relationship-matrix)
-5. [BI Dimensional Model](#bi-dimensional-model)
-6. [Constraints & Business Rules](#constraints--business-rules)
-7. [Assumptions & Design Decisions](#assumptions--design-decisions)
+5. [Constraints & Business Rules](#constraints--business-rules)
+.8 [Assumptions & Design Decisions](#assumptions--design-decisions)
 
 ---
 
@@ -104,10 +103,6 @@ Order Document {
 - ✅ No repeating groups
 - ✅ Each row is unique (composite key: order_id + product_id)
 
-**Problems Remaining:**
-- ❌ Massive data redundancy (customer info repeated for each product)
-- ❌ Partial dependencies exist
-- ❌ Update anomalies persist
 
 **Primary Key in 1NF:** (order_id, product_id)
 
@@ -148,10 +143,7 @@ Order Document {
 - ✅ No partial dependencies
 - ✅ Reduced redundancy
 
-**Problems Remaining:**
-- ❌ Transitive dependencies exist
-- ❌ Customer data still redundant in ORDERS table
-- ❌ User data (processed_name) dependent on processed_by, not order_id
+ (processed_name) dependent on processed_by, not order_id
 
 ---
 
@@ -509,62 +501,6 @@ Attributes:
 - **RESTRICT:** Primary key updates blocked if children exist (preferred approach)
 
 ---
-
-## BI Dimensional Model
-
-### Star Schema Design for Analytics
-
-```
-                    ┌──────────────────┐
-                    │  DIM_CUSTOMER    │
-                    ├──────────────────┤
-                    │ PK customer_key  │
-                    │    customer_id   │
-                    │    name          │
-                    │    city          │
-                    │    country       │
-                    │    status        │
-                    │    credit_limit  │
-                    │    segment       │◄──────┐
-                    └──────────────────┘       │
-                                               │
-┌──────────────────┐                          │
-│  DIM_PRODUCT     │                          │
-├──────────────────┤                          │
-│ PK product_key   │                          │
-│    product_id    │                          │
-│    product_name  │                          │
-│    category      │                          │
-│    unit_price    │                          │
-│    supplier      │◄────────┐                │
-└──────────────────┘         │                │
-                             │                │
-┌──────────────────┐         │                │
-│  DIM_USER        │         │                │
-├──────────────────┤         │                │
-│ PK user_key      │         │                │
-│    user_id       │         │                │
-│    username      │         │                │
-│    full_name     │         │      ┌─────────▼──────────┐
-│    role          │◄────────┼──────│   FACT_ORDERS      │
-│    department    │         │      ├────────────────────┤
-└──────────────────┘         │      │ PK order_key       │
-                             │      │ FK customer_key    │
-┌──────────────────┐         │      │ FK product_key     │
-│  DIM_DATE        │         │      │ FK user_key        │
-├──────────────────┤         │      │ FK date_key        │
-│ PK date_key      │         └──────┤    quantity        │
-│    date          │                │    unit_price      │
-│    day           │◄───────────────┤    total_amount    │
-│    week          │                │    tax_amount      │
-│    month         │                │    order_status    │
-│    quarter       │                │    payment_status  │
-│    year          │                │    processing_time │
-│    is_weekend    │                └────────────────────┘
-│    is_holiday    │
-│    fiscal_period │
-└──────────────────┘
-```
 
 ### Fact Table: FACT_ORDERS
 
@@ -1156,9 +1092,3 @@ operation_date DEFAULT SYSTIMESTAMP
 - ✅ Efficient indexing
 
 ---
-
-**Document Version:** 1.0  
-**Normalization Level:** Third Normal Form (3NF)  
-**Reviewed By:** SHEJA RADAN BORIS (29096)  
-**Date:** December 2024  
-**Status:** Final
