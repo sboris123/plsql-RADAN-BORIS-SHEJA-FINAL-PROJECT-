@@ -139,9 +139,6 @@ C:\APP\ORADATA\XE\tue_29096_boris_acovs_db\
 ```
 
 **Files Created:**
-- `system01.dbf` - System tablespace
-- `sysaux01.dbf` - System auxiliary
-- `undotbs01.dbf` - Undo tablespace
 - `data_ts.dbf` - Custom data tablespace (100 MB)
 - `index_ts.dbf` - Custom index tablespace (50 MB)
 - `temp_ts.dbf` - Temporary tablespace (50 MB)
@@ -189,10 +186,10 @@ ARCHIVELOG
 
 ### ✅ PDB Creation
 ```
-Pluggable database created.
-<img width="960" height="425" alt="CREATE PLUGGABLE DATABASE" src="https://github.com/user-attachments/assets/cef42791-fbfa-44e4-af35-c0256caf1905" />
+Pluggable database created
 
 ```
+<img width="960" height="425" alt="CREATE PLUGGABLE DATABASE" src="https://github.com/user-attachments/assets/cef42791-fbfa-44e4-af35-c0256caf1905" />
 **PDB Name:** TUE_29096_BORIS_ACOVS_DB  
 **Status:** MOUNTED initially, then OPENED
 
@@ -211,8 +208,9 @@ Tablespace created. (x3)
 sga_target = 1G
 pga_aggregate_target = 512M
 pga_aggregate_limit = 1G
-<img width="960" height="205" alt="onfigure Memory Parameters (SGA and PGA at PDB Level)" src="https://github.com/user-attachments/assets/9c32f1c8-85d5-4776-9f89-322c90d77982" />
 
+
+<img width="960" height="205" alt="onfigure Memory Parameters (SGA and PGA at PDB Level)" src="https://github.com/user-attachments/assets/9c32f1c8-85d5-4776-9f89-322c90d77982" />
 ```
 **All parameters:** System altered successfully
 
@@ -224,12 +222,13 @@ Grant succeeded. (x3)
 - DBA role
 - SYSDBA privilege
 - CREATE SESSION, CREATE TABLE, UNLIMITED TABLESPACE
-<img width="960" height="207" alt="Grant Super Admin Privileges to the Admin User" src="https://github.com/user-attachments/assets/b93abf09-5899-42d8-8154-33f4bc231742" />
+
 
 ### ✅ Verification Results
 
 **Tablespaces (dba_data_files):**
 ```
+<img width="960" height="207" alt="Grant Super Admin Privileges to the Admin User" src="https://github.com/user-attachments/assets/b93abf09-5899-42d8-8154-33f4bc231742" />
 SYSTEM     - C:\...\SYSTEM01.DBF     - YES
 SYSAUX     - C:\...\SYSAUX01.DBF     - YES
 UNDOTBS1   - C:\...\UNDOTBS01.DBF    - YES
