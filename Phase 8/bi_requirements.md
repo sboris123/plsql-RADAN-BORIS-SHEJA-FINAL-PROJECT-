@@ -2,8 +2,6 @@
 ## Automated Customer Order Validation System
 
 **Project:** Order Validation System  
-**Author:** SHEJA RADAN BORIS (29096)  
-**Date:** December 2024
 
 ---
 
@@ -509,8 +507,3 @@ ORDER BY cohort_month, months_since_first_order;
 | Report Delivery Success | 98%+ | Automated monitoring |
 
 ---
-
-**Document Version:** 1.0  
-**Prepared By:** SHEJA RADAN BORIS (29096)  
-**Approved By:** [Advisor Name]  
-**Date:** December 2024
