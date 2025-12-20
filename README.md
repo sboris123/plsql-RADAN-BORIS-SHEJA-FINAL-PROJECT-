@@ -204,7 +204,7 @@ ORDER BY spending_rank;
 ### Database Structure
 ![ER Diagram]<img width="4539" height="2615" alt="er diagram" src="https://github.com/user-attachments/assets/f020d98d-d9db-40aa-9af3-cd647e59206e" />
 
-![Table Structure](screenshots/database_structure/tables_view.png)
+![Table Structure]
 
 ### Sample Data
 ![Customer Data](screenshots/database_structure/sample_customers.png)
