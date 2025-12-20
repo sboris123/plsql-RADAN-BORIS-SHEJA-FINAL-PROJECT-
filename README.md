@@ -68,16 +68,16 @@ Modern e-commerce businesses face critical challenges in order processing: manua
 2. **Execute scripts in order**
 
 **Create Database Objects**
-[CREATE TABLE](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/4b80a62893f855b2fcaaabd7c7aa0057905d523d/Phase%205/Create%20tables.sql)
-   - [Create tables](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/0721051d6f5988343ec57f7a189698a752722e05/Phase%205/Create%20sequence.sql)
-   - [02_create_sequences.sql](database/scripts/02_create_sequences.sql)
-   - [03_create_indexes.sql](database/scripts/03_create_indexes.sql)
-   - [04_insert_data.sql](database/scripts/04_insert_data.sql)
-@database/scripts/05_functions.sql
-@database/scripts/06_procedures.sql
-@database/scripts/07_packages.sql
-@database/scripts/08_triggers.sql
-@database/scripts/09_views.sql
+   - [create_tables.sql](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/4b80a62893f855b2fcaaabd7c7aa0057905d523d/Phase%205/Create%20tables.sql)
+   - [create_sequences.sql](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/e400c3a083bda9983e25486159f9cad1429cb734/Phase%205/Create%20sequence.sql)
+   - [create_indexes.sql](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/e400c3a083bda9983e25486159f9cad1429cb734/Phase%205/Create%20Indexes.sql)
+   - [insert_data.sql](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/e400c3a083bda9983e25486159f9cad1429cb734/Phase%205/Insert%20data.sql)
+
+   - [functions.sql](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/e400c3a083bda9983e25486159f9cad1429cb734/phase%206/functions/Functions.sql)
+   - [06_procedures.sql]((https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/e400c3a083bda9983e25486159f9cad1429cb734/phase%206/procedures/Procedure.sql))
+   - [07_packages.sql](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/e400c3a083bda9983e25486159f9cad1429cb734/phase%206/packages/Packages.sql)
+   - [08_triggers.sql](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/e400c3a083bda9983e25486159f9cad1429cb734/phase%206/Triggers/Triggers.sql)
+   - [09_views.sql](database/scripts/09_views.sql)
 
 
 3. **Verify installation**
