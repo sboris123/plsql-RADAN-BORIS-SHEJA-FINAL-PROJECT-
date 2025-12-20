@@ -67,7 +67,6 @@ Modern e-commerce businesses face critical challenges in order processing: manua
 
 2. **Execute scripts in order**
 
-**Create Database Objects**
    - [create_tables.sql](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/4b80a62893f855b2fcaaabd7c7aa0057905d523d/Phase%205/Create%20tables.sql)
    - [create_sequences.sql](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/e400c3a083bda9983e25486159f9cad1429cb734/Phase%205/Create%20sequence.sql)
    - [create_indexes.sql](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/e400c3a083bda9983e25486159f9cad1429cb734/Phase%205/Create%20Indexes.sql)
