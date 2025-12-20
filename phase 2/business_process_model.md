@@ -82,6 +82,9 @@ This process is central to Management Information Systems (MIS) as it:
 ## 3. BPMN Process Diagram with Swimlanes
 
 [BPM DIAGRAM](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/184269baab250913dc38789fb559c50c13ce19b8/phase%202/diagram.png)
+
+<img width="1430" height="1310" alt="diagram" src="https://github.com/user-attachments/assets/3a992223-c923-440c-b8b3-669d94f138ce" />
+
 ```
 LEGEND:
 ⭕ = Start/End Event (Circle)
