@@ -207,7 +207,7 @@ ORDER BY spending_rank;
 ![Table Structure]
 
 ### Sample Data
-![Customer Data]Phase 5/create tables/CUSTOMERS.png
+![Customer Data](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/f1577c17de67b2fad0abbf4234168d8bca2db7f9/Phase%205/create%20tables/AUDIT_TRAIL.png)
 ![Product Data](screenshots/database_structure/sample_products.png)
 
 ### PL/SQL Objects
