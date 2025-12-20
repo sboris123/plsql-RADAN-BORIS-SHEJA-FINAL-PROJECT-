@@ -212,17 +212,19 @@ ORDER BY spending_rank;
 **Product Data**![screenshots/database_structure/sample_products.png](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/c7415626b38582bec19e0e8076cc3b96a5a3a5bb/Phase%205/insert%20realistic%20record/PRODUCTS%20%20a.png))
 
 ### PL/SQL Objects
-**Procedures**![Procedures](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/5dde540886dfb4f5dbc5b4ad8357173012480613/phase%206/functions/Function%202%20a%20Returns%20Available%20stock%20quantity%20-1%20if%20product%20doesn't%20exist%20or%20is%20unavailable.png)
+**Procedures**![Procedures](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/2df0f82352edadfa2d05d0ff2af8fedfec6478ab/phase%206/procedures/Procedure%205%20a%20Restock%20Product%20Bulk%20Operation%20with%20Cursor.png
+)
 **Triggers**![Triggers](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/2df0f82352edadfa2d05d0ff2af8fedfec6478ab/phase%206/Triggers/Trigger%201%20Auto-update%20product%20status%20based%20on%20stock.png)
 
 ### Test Results
-![Order Validation Test](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/2df0f82352edadfa2d05d0ff2af8fedfec6478ab/phase%206/COMPREHENSIVE%20TESTING%20SCRIPTS/Test%203%20Calculate%20Order%20Total%20Function.png
+**Order Validation Test**![Order Validation Test](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/2df0f82352edadfa2d05d0ff2af8fedfec6478ab/phase%206/COMPREHENSIVE%20TESTING%20SCRIPTS/Test%203%20Calculate%20Order%20Total%20Function.png
 )
-![Trigger Restriction Test](screenshots/test_results/weekday_denial.png)
+**Restriction Test**![Trigger Restriction Test](nhttps://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/0a4485cfea149b7ccaaebcbf99bb8b73c6a12eef/Phase%207/Audit/AUDIT/Triggers/Trigger%201%20ORDERS%20Table%20%20INSERT%20Restriction%20a.png
+)
 
 ### Audit Logs
-![Audit Log Entries](screenshots/audit_logs/operation_log.png)
-![Denied Operations](screenshots/audit_logs/denied_attempts.png)
+![Audit Log Entries]()
+**Denied Oerations**![Denied Operations](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/0a4485cfea149b7ccaaebcbf99bb8b73c6a12eef/Phase%207/Audit/TESTING%20SCRIPTS/Denied%20Operations%20Analysis.png)
 
 ---
 
