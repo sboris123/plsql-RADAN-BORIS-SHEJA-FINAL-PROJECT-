@@ -1,9 +1,8 @@
 # Dashboard Mockups - Detailed Visual Descriptions
 ## Automated Customer Order Validation System
-
-**Author:** SHEJA RADAN BORIS (29096)  
+  
 **Purpose:** Guide for creating professional dashboard mockups  
-**Tools:** PowerPoint, Figma, Adobe XD, or Canva
+
 
 ---
 
@@ -508,7 +507,3 @@
 - Realistic data values
 
 ---
-
-**Created By:** SHEJA RADAN BORIS (29096)  
-**Date:** December 2024  
-**Purpose:** Visual guide for BI dashboard implementation
