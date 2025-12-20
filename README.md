@@ -77,15 +77,11 @@ Modern e-commerce businesses face critical challenges in order processing: manua
    - [procedures.sql](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/e400c3a083bda9983e25486159f9cad1429cb734/phase%206/procedures/Procedure.sql)
    - [packages.sql](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/e400c3a083bda9983e25486159f9cad1429cb734/phase%206/packages/Packages.sql)
    - [triggers.sql](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/e400c3a083bda9983e25486159f9cad1429cb734/phase%206/Triggers/Triggers.sql)
-   - [09_views.sql](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/f241ed6acf1f8f493b3816fc6d05023f8c6c60cb/phase%206/Views.sql)
+   - [views.sql](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/f241ed6acf1f8f493b3816fc6d05023f8c6c60cb/phase%206/Views.sql)
+- [test_scripts.sql](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/985ab6bb38766f2962125946979ca8ca9714e188/phase%206/COMPREHENSIVE%20TESTING%20SCRIPTS/Testing.sql)
 
 
-3. **Verify installation**
-```sql
-@database/scripts/10_test_s cripts.sql
-```
-
-4. **Check data loaded**
+3. **Check data loaded**
 ```sql
 SELECT CUSTOMERS, COUNT(*) as row_count 
 FROM (
@@ -94,9 +90,6 @@ FROM (
   UNION ALL SELECT 'ORDERS' FROM ORDERS
 ) 
 GROUP BY CUSTOMERS;
-```
-
----
 
 ## 📊 Sample Usage
 
