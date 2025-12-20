@@ -12,7 +12,7 @@
 3. [Detailed Entity Specifications](#detailed-entity-specifications)
 4. [Relationship Matrix](#relationship-matrix)
 5. [Constraints & Business Rules](#constraints--business-rules)
-8. [Assumptions & Design Decisions](#assumptions--design-decisions)
+6. [Assumptions & Design Decisions](#assumptions--design-decisions)
 
 ---
 
