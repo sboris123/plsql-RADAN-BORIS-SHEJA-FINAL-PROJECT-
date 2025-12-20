@@ -223,12 +223,12 @@ Grant succeeded. (x3)
 - SYSDBA privilege
 - CREATE SESSION, CREATE TABLE, UNLIMITED TABLESPACE
 
-
+<img width="960" height="207" alt="Grant Super Admin Privileges to the Admin User" src="https://github.com/user-attachments/assets/b93abf09-5899-42d8-8154-33f4bc231742" />
 ### ✅ Verification Results
 
 **Tablespaces (dba_data_files):**
 ```
-<img width="960" height="207" alt="Grant Super Admin Privileges to the Admin User" src="https://github.com/user-attachments/assets/b93abf09-5899-42d8-8154-33f4bc231742" />
+
 SYSTEM     - C:\...\SYSTEM01.DBF     - YES
 SYSAUX     - C:\...\SYSAUX01.DBF     - YES
 UNDOTBS1   - C:\...\UNDOTBS01.DBF    - YES
