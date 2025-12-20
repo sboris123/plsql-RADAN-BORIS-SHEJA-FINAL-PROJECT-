@@ -204,7 +204,7 @@ ORDER BY spending_rank;
 ### Database Structure
 ![ER Diagram]<img width="4539" height="2615" alt="er diagram" src="https://github.com/user-attachments/assets/f020d98d-d9db-40aa-9af3-cd647e59206e" />
 
-![Table Structure](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/c366173d92b9ec935495cbb20b0373b62ad4b580/Phase%205/create%20tables/CUSTOMERS.png https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/2692b5e435e0e077866a825dc2505aa0ce7bf58d/Phase%205/create%20tables/PRODUCTS.png)
+![Table Structure](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/c366173d92b9ec935495cbb20b0373b62ad4b580/Phase%205/create%20tables/CUSTOMERS.png)
 
 ### Sample Data
 ![Customer Data](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/f1577c17de67b2fad0abbf4234168d8bca2db7f9/Phase%205/create%20tables/AUDIT_TRAIL.png)
