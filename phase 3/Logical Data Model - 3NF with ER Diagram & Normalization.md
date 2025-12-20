@@ -1,10 +1,8 @@
 # Logical Data Model Design (3NF)
 ## Automated Customer Order Validation System
-
-**Author:** SHEJA RADAN BORIS (29096)  
 **Normalization Level:** Third Normal Form (3NF)  
 **Modeling Approach:** Entity-Relationship (ER) Model  
-**Date:** December 2024
+**Date:** December 2025
 
 ---
 
@@ -22,129 +20,8 @@
 ## Entity-Relationship Model
 
 ### ER Diagram (Crow's Foot Notation)
-
+![Er diagram](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/e4a986b35dc6ccef28ddfdc63ea379ffe870c58c/phase%203/er%20diagram.png)
 ```
-┌──────────────────┐                    ┌──────────────────┐
-│   CUSTOMERS      │                    │   USER_ACCOUNTS  │
-├──────────────────┤                    ├──────────────────┤
-│ PK customer_id   │──────┐      ┌──────│ PK user_id       │
-│    first_name    │      │      │      │    username      │
-│    last_name     │      │      │      │    password_hash │
-│    email  (UK)   │      │      │      │    full_name     │
-│    phone         │      │      │      │    email  (UK)   │
-│    address       │      │      │      │    role          │
-│    city          │      │      │      │    account_status│
-│    country       │      │      │      │    created_date  │
-│    postal_code   │      │      │      │    last_login    │
-│    registration  │      │      │      │    failed_logins │
-│    customer_stat │      │      │      └──────────────────┘
-│    credit_limit  │      │      │               │
-│    total_orders  │      │      │               │ processes
-└──────────────────┘      │      │               │ 0..*
-         │                │      │               │
-         │ places         │      │               ▼
-         │ 1..*           │      │      ┌──────────────────┐
-         │                │      │      │     ORDERS       │
-         │                │      └──────├──────────────────┤
-         │                │      FK     │ PK order_id      │
-         │                └────────────→│ FK customer_id   │
-         │                       FK     │ FK product_id    │
-         └─────────────────────────────→│ FK user_id       │
-                                1..*    │    quantity      │
-┌──────────────────┐                    │    unit_price    │
-│    PRODUCTS      │                    │    total_amount  │
-├──────────────────┤                    │    order_date    │
-│ PK product_id    │──────┐             │    order_status  │
-│    product_name  │      │             │    shipping_addr │
-│    category      │      │             │    payment_status│
-│    description   │      │ referenced  │    notes         │
-│    unit_price    │      │ in          └──────────────────┘
-│    stock_quantity│      │ 1..*                │
-│    reorder_level │      │                     │
-│    supplier_name │      │                     │
-│    product_status│      └─────────────────────┘
-│    created_date  │
-│    last_updated  │
-└──────────────────┘
-
-┌──────────────────────┐             ┌──────────────────────┐
-│ ORDER_ERROR_LOG      │             │ ORDER_STATUS_HISTORY │
-├──────────────────────┤             ├──────────────────────┤
-│ PK error_id          │             │ PK history_id        │
-│ FK customer_id (opt) │             │ FK order_id          │
-│ FK product_id (opt)  │             │ FK changed_by        │
-│ FK attempted_by      │             │    old_status        │
-│    quantity          │             │    new_status        │
-│    error_message     │             │    change_date       │
-│    error_date        │             │    remarks           │
-│    error_type        │             └──────────────────────┘
-└──────────────────────┘                      │
-                                              │ tracks
-                                              │ 1..*
-                                              │
-┌──────────────────────┐             ┌───────▼──────────────┐
-│ CUSTOMER_FEEDBACK    │             │ PAYMENT_TRANSACTIONS │
-├──────────────────────┤             ├──────────────────────┤
-│ PK feedback_id       │             │ PK transaction_id    │
-│ FK order_id          │◄────────────│ FK order_id          │
-│ FK customer_id       │    has      │ FK processed_by      │
-│ FK responded_by      │    0..1     │    payment_method    │
-│    rating            │             │    amount            │
-│    comment           │             │    transaction_date  │
-│    feedback_date     │             │    transaction_stat  │
-│    response          │             │    payment_reference │
-│    response_date     │             │    gateway_response  │
-└──────────────────────┘             └──────────────────────┘
-
-┌──────────────────────┐             ┌──────────────────────┐
-│ INVENTORY_AUDIT      │             │ USER_SESSIONS        │
-├──────────────────────┤             ├──────────────────────┤
-│ PK audit_id          │             │ PK session_id        │
-│ FK product_id        │             │ FK user_id           │
-│ FK performed_by      │             │    login_time        │
-│ FK reference_order   │             │    logout_time       │
-│    transaction_type  │             │    ip_address        │
-│    quantity_change   │             │    session_status    │
-│    old_quantity      │             └──────────────────────┘
-│    new_quantity      │
-│    audit_date        │             ┌──────────────────────┐
-│    reason            │             │ SYSTEM_CONFIGURATION │
-└──────────────────────┘             ├──────────────────────┤
-                                     │ PK config_id         │
-┌──────────────────────┐             │    config_key (UK)   │
-│ PUBLIC_HOLIDAYS      │             │    config_value      │
-├──────────────────────┤             │    description       │
-│ PK holiday_id        │             │    data_type         │
-│ FK created_by        │             │    last_updated      │
-│    holiday_date (UK) │             │ FK updated_by        │
-│    holiday_name      │             └──────────────────────┘
-│    holiday_type      │
-│    is_recurring      │             ┌──────────────────────┐
-│    created_date      │             │ AUDIT_TRAIL          │
-└──────────────────────┘             ├──────────────────────┤
-                                     │ PK audit_id          │
-┌──────────────────────┐             │ FK performed_by      │
-│ OPERATION_AUDIT_LOG  │             │    table_name        │
-├──────────────────────┤             │    operation         │
-│ PK audit_log_id      │             │    record_id         │
-│    operation_type    │             │    old_values        │
-│    table_name        │             │    new_values        │
-│    operation_date    │             │    operation_date    │
-│    operation_day     │             │    ip_address        │
-│    is_weekend        │             └──────────────────────┘
-│    is_holiday        │
-│    holiday_name      │
-│    operation_status  │
-│    denial_reason     │
-│    user_session      │
-│    os_user           │
-│    machine_name      │
-│    ip_address        │
-│    record_id         │
-│    old_values        │
-│    new_values        │
-│    error_message     │
-└──────────────────────┘
 
 LEGEND:
 PK = Primary Key
