@@ -1,8 +1,5 @@
 # Oracle Pluggable Database Setup Guide
 ## Automated Customer Order Validation System
-
-**Author:** SHEJA RADAN BORIS  
-**Student ID:** 29096  
 **Database:** Oracle 21c Express Edition  
 **PDB Name:** `tue_29096_boris_acovs_db`
 
@@ -23,16 +20,13 @@ This script configures a dedicated Oracle Pluggable Database (PDB) for the Autom
 ### Prerequisites
 - Oracle 21c Express Edition installed
 - SYSDBA access
-- Windows environment (paths are Windows-specific)
 
 ### Installation Steps
 
 ```sql
--- 1. Connect as SYSDBA
-sqlplus / as sysdba
+--  Connect as SYSDBA
+system / as sysdba
 
--- 2. Run the complete setup script
-@DB_Phase_4.sql
 ```
 
 ---
@@ -111,18 +105,7 @@ SELECT * FROM dba_sys_privs WHERE grantee = 'BORIS_ADMIN';
 
 ---
 
-## 📊 Database Specifications
 
-### System Resources
-```
-Total SGA: 1,610,609,432 bytes (~1.5 GB)
-Fixed Size: 9,855,768 bytes
-Variable Size: 989,855,744 bytes
-Database Buffers: 603,979,776 bytes
-Redo Buffers: 6,918,144 bytes
-```
-
-### Tablespace Autoextend
 - **Increment:** 10 MB per extension
 - **Max Size:** UNLIMITED
 - **Prevents:** "Out of space" errors during growth
@@ -136,14 +119,9 @@ Redo Buffers: 6,918,144 bytes
 sqlplus boris_admin/admin@localhost:1521/tue_29096_boris_acovs_db as sysdba
 ```
 
-### Connect as Regular Admin
-```bash
-sqlplus boris_admin/admin@localhost:1521/tue_29096_boris_acovs_db
-```
-
 ### SQL Developer Connection
 ```
-Connection Name: ACOVS_PDB
+Connection Name: DB
 Username: boris_admin
 Password: admin
 Hostname: localhost
@@ -200,42 +178,6 @@ ALTER SYSTEM SET db_recovery_file_dest_size = 20G;
 
 ---
 
-## 🔄 Next Steps
-
-After successful setup:
-
-1. **Create application schema**
-   ```sql
-   CREATE USER order_user IDENTIFIED BY password;
-   GRANT CONNECT, RESOURCE TO order_user;
-   ALTER USER order_user QUOTA UNLIMITED ON data_ts;
-   ```
-
-2. **Run table creation scripts**
-   ```sql
-   @01_create_tables.sql
-   @02_create_sequences.sql
-   @03_create_indexes.sql
-   ```
-
-3. **Load sample data**
-   ```sql
-   @04_insert_data.sql
-   ```
-
-4. **Create PL/SQL objects**
-   ```sql
-   @05_functions.sql
-   @06_procedures.sql
-   @07_packages.sql
-   @08_triggers.sql
-   ```
-
----
-
-## 📊 Setup Execution Results
-
-Based on the provided screenshots, here's what was successfully configured:
 
 ### ✅ Archive Logging
 ```
@@ -248,6 +190,8 @@ ARCHIVELOG
 ### ✅ PDB Creation
 ```
 Pluggable database created.
+<img width="960" height="425" alt="CREATE PLUGGABLE DATABASE" src="https://github.com/user-attachments/assets/cef42791-fbfa-44e4-af35-c0256caf1905" />
+
 ```
 **PDB Name:** TUE_29096_BORIS_ACOVS_DB  
 **Status:** MOUNTED initially, then OPENED
@@ -260,12 +204,15 @@ Tablespace created. (x3)
 - `data_ts` - 100 MB with autoextend
 - `index_ts` - 50 MB with autoextend  
 - `temp_ts` - 50 MB with autoextend (set as default)
-
+<img width="960" height="504" alt="open pdb and creating tablespace " src="https://github.com/user-attachments/assets/69250d6a-a1ca-4643-bbcb-01db294cf786" />
+```
 ### ✅ Memory Configuration
 ```
 sga_target = 1G
 pga_aggregate_target = 512M
 pga_aggregate_limit = 1G
+<img width="960" height="205" alt="onfigure Memory Parameters (SGA and PGA at PDB Level)" src="https://github.com/user-attachments/assets/9c32f1c8-85d5-4776-9f89-322c90d77982" />
+
 ```
 **All parameters:** System altered successfully
 
@@ -277,6 +224,7 @@ Grant succeeded. (x3)
 - DBA role
 - SYSDBA privilege
 - CREATE SESSION, CREATE TABLE, UNLIMITED TABLESPACE
+<img width="960" height="207" alt="Grant Super Admin Privileges to the Admin User" src="https://github.com/user-attachments/assets/b93abf09-5899-42d8-8154-33f4bc231742" />
 
 ### ✅ Verification Results
 
@@ -378,72 +326,5 @@ SELECT
 FROM v$archived_log
 WHERE first_time > SYSDATE - 7;
 ```
-
----
-
-## 📞 Support & Contact
-
-**Database Administrator:** SHEJA RADAN BORIS  
-**Student ID:** 29096  
-**Email:** boris.sheja@student.auca.ac.rw  
-**Institution:** Adventist University of Central Africa (AUCA)  
-**Project:** Automated Customer Order Validation System
-
----
-
-## 📄 Related Documentation
-
-- [Main Project README](../README.md)
-- [Installation Guide](../documentation/installation_guide.md)
-- [Data Dictionary](../documentation/data_dictionary.md)
-- [SQL Scripts](../database/scripts/)
-
----
-
-## ⚠️ Important Notes
-
-1. **Security:** Change default password `admin` before production use
-2. **Backup:** Configure RMAN backups after initial setup
-3. **Monitoring:** Set up alerts for tablespace usage and archive log space
-4. **Maintenance:** Schedule regular statistics gathering and index rebuilds
-5. **Documentation:** Update this README if configuration changes
-
----
-
-## ✅ Final Status
-
-**PDB Setup:** ✅ COMPLETE  
-**Archive Logging:** ✅ ENABLED  
-**Tablespaces:** ✅ CREATED (3/3)  
-**Memory Config:** ✅ OPTIMIZED  
-**Admin User:** ✅ CONFIGURED  
-**Verification:** ✅ ALL PASSED  
-
-**System Status:** 🟢 READY FOR APPLICATION DEPLOYMENT
-
----
-
-**Setup Date:** December 2024  
-**Oracle Version:** 21c Express Edition Release 21.0.0.0.0  
-**Configuration File:** DB_Phase_4.sql  
-**Documentation Version:** 1.0
-
----
-
-## 🎉 Success!
-
-Your Oracle Pluggable Database is now configured and ready for the Automated Customer Order Validation System!
-
-Next step: Deploy the application tables and PL/SQL objects.
-
-```sql
--- Quick connection test
-CONNECT boris_admin/admin@localhost:1521/tue_29096_boris_acovs_db
-
--- You should see:
--- Connected.
-```
-
----
 
 **END OF README**
