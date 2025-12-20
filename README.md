@@ -206,7 +206,7 @@ ORDER BY spending_rank;
 
 ### Table Strucure
 **Customer Table**![Table Structure](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/c366173d92b9ec935495cbb20b0373b62ad4b580/Phase%205/create%20tables/CUSTOMERS.png)
-**Product Table**![Table Structure]()
+**Product Table**![Table Structure](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/c449755a86c30753244f39643a16fb8866ac15ab/Phase%205/create%20tables/PRODUCTS.png)
 ### Sample Data
 **Customer Data**![Customer Data](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/a386f92d9bab3abcafe2e96b4406ac406a3d3e2f/Phase%205/insert%20realistic%20record/Insert%20CUSTOMERS.png)
 **Product Data**![screenshots/database_structure/sample_products.png](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/c7415626b38582bec19e0e8076cc3b96a5a3a5bb/Phase%205/insert%20realistic%20record/PRODUCTS%20%20a.png))
