@@ -74,9 +74,9 @@ Modern e-commerce businesses face critical challenges in order processing: manua
    - [insert_data.sql](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/e400c3a083bda9983e25486159f9cad1429cb734/Phase%205/Insert%20data.sql)
 
    - [functions.sql](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/e400c3a083bda9983e25486159f9cad1429cb734/phase%206/functions/Functions.sql)
-   - [06_procedures.sql]((https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/e400c3a083bda9983e25486159f9cad1429cb734/phase%206/procedures/Procedure.sql))
-   - [07_packages.sql](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/e400c3a083bda9983e25486159f9cad1429cb734/phase%206/packages/Packages.sql)
-   - [08_triggers.sql](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/e400c3a083bda9983e25486159f9cad1429cb734/phase%206/Triggers/Triggers.sql)
+   - [procedures.sql](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/e400c3a083bda9983e25486159f9cad1429cb734/phase%206/procedures/Procedure.sql)
+   - [packages.sql](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/e400c3a083bda9983e25486159f9cad1429cb734/phase%206/packages/Packages.sql)
+   - [triggers.sql](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/e400c3a083bda9983e25486159f9cad1429cb734/phase%206/Triggers/Triggers.sql)
    - [09_views.sql](database/scripts/09_views.sql)
 
 
