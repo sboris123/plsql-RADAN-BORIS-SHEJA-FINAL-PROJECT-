@@ -89,11 +89,11 @@ FROM (
   UNION ALL SELECT 'ORDERS' FROM ORDERS
 ) 
 GROUP BY CUSTOMERS;
-
+```
 ## 📊 Sample Usage
-
-### Place Order Procedure (Success Case)
 ```sql
+### Place Order Procedure (Success Case)
+
 DECLARE
     v_customer_id NUMBER;
     v_product_id NUMBER;
