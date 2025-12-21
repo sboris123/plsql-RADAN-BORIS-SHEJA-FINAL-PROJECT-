@@ -8,19 +8,19 @@
 
 ---
 
-## 📋 Project Overview
+##  Project Overview
 
 The **Automated Customer Order Validation System** is a comprehensive database solution designed for e-commerce platforms to streamline order processing, enforce business rules, and maintain complete audit trails. Built entirely in PL/SQL for Oracle Database, this system eliminates manual verification errors and ensures data integrity across all transactions.
 
 
 
-## 🎯 Problem Statement
+##  Problem Statement
 
 Modern e-commerce businesses face critical challenges in order processing: manual validation leads to errors such as accepting orders for non-existent products, insufficient stock, or suspended customers. Additionally, unrestricted database access during business hours poses data integrity risks, and the lack of comprehensive audit trails creates compliance issues and makes troubleshooting difficult.
 
 ---
 
-## 🚀 Key Objectives
+##  Key Objectives
 
 1. - **Automate order validation** - Validate customers, products, stock, and credit limits automatically
 2. - **Enforce business rules** - Restrict database modifications to weekends only (non-holidays)
@@ -31,7 +31,7 @@ Modern e-commerce businesses face critical challenges in order processing: manua
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 ### Database Components
 
@@ -46,18 +46,18 @@ Modern e-commerce businesses face critical challenges in order processing: manua
 
 ### Key Features
 
-- 🔐 **Time-based Access Control** - Weekday/holiday restrictions
-- 📊 **Real-time Analytics** - Customer rankings, product trends, sales reports
-- 🔍 **Complete Audit Trail** - Every operation logged with user context
-- ⚡ **Performance Optimized** - Bulk operations, proper indexing
-- 🎯 **Business Rule Validation** - Credit limits, stock levels, order quantities
-- 📈 **Window Functions** - ROW_NUMBER, RANK, LAG, LEAD for trend analysis
+-  **Time-based Access Control** - Weekday/holiday restrictions
+-  **Real-time Analytics** - Customer rankings, product trends, sales reports
+-  **Complete Audit Trail** - Every operation logged with user context
+-  **Performance Optimized** - Bulk operations, proper indexing
+-  **Business Rule Validation** - Credit limits, stock levels, order quantities
+-  **Window Functions** - ROW_NUMBER, RANK, LAG, LEAD for trend analysis
 
 ---
 
 
 
-## 🚀 Quick Start Instructions
+## Quick Start Instructions
 
 ### Prerequisites
 
@@ -90,7 +90,7 @@ FROM (
 ) 
 GROUP BY CUSTOMERS;
 ```
-## 📊 Sample Usage
+## Sample Usage
 ```sql
 ### Place Order Procedure (Success Case)
 
@@ -221,7 +221,7 @@ ORDER BY spending_rank;
 
 ---
 
-## 📈 Business Intelligence
+##  Business Intelligence
 
 ### Key Performance Indicators (KPIs)
 
@@ -241,20 +241,20 @@ ORDER BY spending_rank;
 
 ---
 
-## 🧪 Testing Results
+##  Testing Results
 
 | Test Case | Status | Details |
 |-----------|--------|---------|
-| Customer Validation | ✅ PASS | Invalid customers rejected |
-| Stock Availability | ✅ PASS | Insufficient stock orders blocked |
-| Credit Limit Check | ✅ PASS | Orders exceeding credit denied |
-| Weekday Restriction | ✅ PASS | DML operations blocked Mon-Fri |
-| Holiday Restriction | ✅ PASS | Operations blocked on holidays |
-| Weekend Operations | ✅ PASS | All operations allowed Sat-Sun |
-| Payment Processing | ✅ PASS | Transactions logged correctly |
-| Audit Trail | ✅ PASS | All attempts captured |
-| Bulk Operations | ✅ PASS | Compound trigger functional |
-| Window Functions | ✅ PASS | Rankings and trends accurate |
+| Customer Validation |  PASS | Invalid customers rejected |
+| Stock Availability |  PASS | Insufficient stock orders blocked |
+| Credit Limit Check |  PASS | Orders exceeding credit denied |
+| Weekday Restriction |  PASS | DML operations blocked Mon-Fri |
+| Holiday Restriction |  PASS | Operations blocked on holidays |
+| Weekend Operations |  PASS | All operations allowed Sat-Sun |
+| Payment Processing |  PASS | Transactions logged correctly |
+| Audit Trail |  PASS | All attempts captured |
+| Bulk Operations |  PASS | Compound trigger functional |
+| Window Functions |  PASS | Rankings and trends accurate |
 
 **Total Tests:** 10 | **Passed:** 10 | **Failed:** 0 | **Success Rate:** 100%
 
@@ -264,16 +264,16 @@ ORDER BY spending_rank;
 
 This project demonstrates mastery of:
 
-- ✅ Complex database design with proper normalization
-- ✅ Advanced PL/SQL programming (procedures, functions, packages)
-- ✅ Trigger implementation for business rules
-- ✅ Exception handling and error logging
-- ✅ Cursor processing (explicit and bulk operations)
-- ✅ Window functions for analytics
-- ✅ Transaction management and data integrity
-- ✅ Security through access control
-- ✅ Comprehensive auditing and compliance
-- ✅ Performance optimization with indexes
+-  Complex database design with proper normalization
+-  Advanced PL/SQL programming (procedures, functions, packages)
+-  Trigger implementation for business rules
+-  Exception handling and error logging
+-  Cursor processing (explicit and bulk operations)
+-  Window functions for analytics
+-  Transaction management and data integrity
+-  Security through access control
+-  Comprehensive auditing and compliance
+-  Performance optimization with indexes
 
 ---
 ## Innovation 
