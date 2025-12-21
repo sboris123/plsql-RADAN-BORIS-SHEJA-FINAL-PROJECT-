@@ -260,7 +260,7 @@ ORDER BY spending_rank;
 
 ---
 
-## 🎓 Learning Outcomes
+##  Learning Outcomes
 
 This project demonstrates mastery of:
 
