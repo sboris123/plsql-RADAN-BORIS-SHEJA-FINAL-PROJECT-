@@ -5,7 +5,7 @@
 
 ---
 
-## 📋 Overview
+## Overview
 
 This script configures a dedicated Oracle Pluggable Database (PDB) for the Automated Customer Order Validation System with:
 - Archive logging enabled for backup/recovery
@@ -15,7 +15,7 @@ This script configures a dedicated Oracle Pluggable Database (PDB) for the Autom
 
 ---
 
-## 🚀 Quick Setup
+##  Quick Setup
 
 ### Prerequisites
 - Oracle 21c Express Edition installed
@@ -31,7 +31,7 @@ system / as sysdba
 
 ---
 
-## 📂 What Gets Created
+##  What Gets Created
 
 ### 1. **Pluggable Database**
 - **Name:** `tue_29096_boris_acovs_db`
@@ -53,13 +53,13 @@ system / as sysdba
 
 ### 4. **User Privileges**
 Admin user `boris_admin` granted:
-- ✅ DBA role (full database administration)
-- ✅ SYSDBA privilege (super admin access)
-- ✅ CREATE SESSION, CREATE TABLE, UNLIMITED TABLESPACE
+-  DBA role (full database administration)
+-  SYSDBA privilege (super admin access)
+-  CREATE SESSION, CREATE TABLE, UNLIMITED TABLESPACE
 
 ---
 
-## 🔐 Archive Logging
+## Archive Logging
 
 **Status:** ENABLED (ARCHIVELOG mode)
 
@@ -77,7 +77,7 @@ SELECT log_mode FROM v$database;
 
 ---
 
-## ✅ Verification Checklist
+##  Verification Checklist
 
 After running the script, verify setup:
 
@@ -112,7 +112,7 @@ SELECT * FROM dba_sys_privs WHERE grantee = 'BORIS_ADMIN';
 
 ---
 
-## 🔌 Connection Strings
+##  Connection Strings
 
 ### Connect as Super Admin
 ```bash
@@ -131,7 +131,7 @@ Service Name: tue_29096_boris_acovs_db
 
 ---
 
-## 📁 File Locations
+##  File Locations
 
 All database files stored in:
 ```
@@ -145,7 +145,7 @@ C:\APP\ORADATA\XE\tue_29096_boris_acovs_db\
 
 ---
 
-## 🛠️ Troubleshooting
+##  Troubleshooting
 
 ### Issue: PDB not opening
 ```sql
@@ -176,7 +176,7 @@ ALTER SYSTEM SET db_recovery_file_dest_size = 20G;
 ---
 
 
-### ✅ Archive Logging
+###  Archive Logging
 ```
 LOG_MODE
 ------------
@@ -184,7 +184,7 @@ ARCHIVELOG
 ```
 **Status:** Enabled successfully
 
-### ✅ PDB Creation
+###  PDB Creation
 ```
 Pluggable database created
 
@@ -193,7 +193,7 @@ Pluggable database created
 **PDB Name:** TUE_29096_BORIS_ACOVS_DB  
 **Status:** MOUNTED initially, then OPENED
 
-### ✅ Tablespace Creation
+###  Tablespace Creation
 ```
 Tablespace created. (x3)
 ```
@@ -203,7 +203,7 @@ Tablespace created. (x3)
 - `temp_ts` - 50 MB with autoextend (set as default)
 <img width="960" height="504" alt="open pdb and creating tablespace " src="https://github.com/user-attachments/assets/69250d6a-a1ca-4643-bbcb-01db294cf786" />
 ```
-### ✅ Memory Configuration
+###  Memory Configuration
 ```
 sga_target = 1G
 pga_aggregate_target = 512M
@@ -214,7 +214,7 @@ pga_aggregate_limit = 1G
 ```
 **All parameters:** System altered successfully
 
-### ✅ User Privileges
+###  User Privileges
 ```
 Grant succeeded. (x3)
 ```
@@ -224,7 +224,7 @@ Grant succeeded. (x3)
 - CREATE SESSION, CREATE TABLE, UNLIMITED TABLESPACE
 
 <img width="960" height="207" alt="Grant Super Admin Privileges to the Admin User" src="https://github.com/user-attachments/assets/b93abf09-5899-42d8-8154-33f4bc231742" />
-### ✅ Verification Results
+###  Verification Results
 
 **Tablespaces (dba_data_files):**
 ```
@@ -251,7 +251,7 @@ TEMP_TS ✓
 
 ---
 
-## 📦 Database File Summary
+##  Database File Summary
 
 ### Data Files (Total: 5)
 1. **SYSTEM** - 250 MB (Oracle system tablespace)
@@ -269,7 +269,7 @@ TEMP_TS ✓
 
 ---
 
-## 🎯 Performance Tuning
+##  Performance Tuning
 
 ### Memory Allocation
 ```
@@ -288,7 +288,7 @@ Total Allocated         ~2.5 GB
 
 ---
 
-## 🔍 Monitoring Commands
+##  Monitoring Commands
 
 ### Check PDB Status
 ```sql
