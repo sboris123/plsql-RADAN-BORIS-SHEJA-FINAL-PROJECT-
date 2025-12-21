@@ -1,4 +1,4 @@
-## Information
+# Information
 
 **Name:** SHEJA RADAN BORIS  
 **Student ID:** 29096  
@@ -22,12 +22,12 @@ Modern e-commerce businesses face critical challenges in order processing: manua
 
 ##  Key Objectives
 
-1. - **Automate order validation** - Validate customers, products, stock, and credit limits automatically
-2. - **Enforce business rules** - Restrict database modifications to weekends only (non-holidays)
-3. - **Comprehensive auditing** - Log all operations with user context, timestamps, and outcomes
-4. - **Data integrity** - Prevent invalid transactions through triggers and constraints
-5. - **Business intelligence** - Provide analytical views for decision-making
-6. - **Error handling** - Capture and log all failed operations with clear messages
+1. **Automate order validation** - Validate customers, products, stock, and credit limits automatically
+2. **Enforce business rules** - Restrict database modifications to weekends only (non-holidays)
+3. **Comprehensive auditing** - Log all operations with user context, timestamps, and outcomes
+4. **Data integrity** - Prevent invalid transactions through triggers and constraints
+5. **Business intelligence** - Provide analytical views for decision-making
+6. **Error handling** - Capture and log all failed operations with clear messages
 
 ---
 
