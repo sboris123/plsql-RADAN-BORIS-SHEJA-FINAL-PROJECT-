@@ -77,12 +77,12 @@ Order Document {
 ```
 
 **Problems with UNF:**
-- ❌ Repeating groups (multiple products per order)
-- ❌ Multi-valued attributes (Products array)
-- ❌ Data redundancy (customer info repeated in every order)
-- ❌ Update anomalies (changing customer email requires updating all orders)
-- ❌ Insertion anomalies (can't add customer without order)
-- ❌ Deletion anomalies (deleting all orders loses customer data)
+-  Repeating groups (multiple products per order)
+-  Multi-valued attributes (Products array)
+-  Data redundancy (customer info repeated in every order)
+-  Update anomalies (changing customer email requires updating all orders)
+-  Insertion anomalies (can't add customer without order)
+-  Deletion anomalies (deleting all orders loses customer data)
 
 ---
 
@@ -99,9 +99,9 @@ Order Document {
 | 4001 | 2024-12-01 | John Smith | john@email.com | +250781234567 | Kigali, Rwanda | 10000 | 2005 | Mouse | 5000 | 3 | 15000 | Pending | Credit Card | sales1 | Marie Uwase |
 
 **Achieved:**
-- ✅ All attributes are atomic (single-valued)
-- ✅ No repeating groups
-- ✅ Each row is unique (composite key: order_id + product_id)
+-  All attributes are atomic (single-valued)
+-  No repeating groups
+-  Each row is unique (composite key: order_id + product_id)
 
 
 **Primary Key in 1NF:** (order_id, product_id)
@@ -139,9 +139,9 @@ Order Document {
 | 2005 | Mouse | 5000 |
 
 **Achieved:**
-- ✅ All non-key attributes depend on the entire primary key
-- ✅ No partial dependencies
-- ✅ Reduced redundancy
+-  All non-key attributes depend on the entire primary key
+-  No partial dependencies
+-  Reduced redundancy
 
  (processed_name) dependent on processed_by, not order_id
 
@@ -229,11 +229,11 @@ Attributes:
 ```
 
 **Achieved:**
-- ✅ All non-key attributes depend ONLY on the primary key
-- ✅ No transitive dependencies
-- ✅ Minimal redundancy
-- ✅ Update, insertion, deletion anomalies eliminated
-- ✅ Each table represents a single entity
+-  All non-key attributes depend ONLY on the primary key
+-  No transitive dependencies
+-  Minimal redundancy
+-  Update, insertion, deletion anomalies eliminated
+-  Each table represents a single entity
 
 **Design Decision:** We kept Orders simple with direct product reference (one product per order) instead of creating ORDER_ITEMS because:
 1. Business requirement: Each order line is treated as a separate order
@@ -1071,24 +1071,24 @@ operation_date DEFAULT SYSTIMESTAMP
 ## Normalization Benefits Summary
 
 ### Data Integrity
-- ✅ No update anomalies (change customer email once)
-- ✅ No insertion anomalies (add customer without order)
-- ✅ No deletion anomalies (delete order keeps customer)
-- ✅ Single source of truth for each fact
+-  No update anomalies (change customer email once)
+-  No insertion anomalies (add customer without order)
+-  No deletion anomalies (delete order keeps customer)
+-  Single source of truth for each fact
 
 ### Maintenance
-- ✅ Easy to add new entities (add USER_ROLES table)
-- ✅ Easy to modify attributes (add customer_tier)
-- ✅ Clear ownership (customer data in CUSTOMERS only)
+-  Easy to add new entities (add USER_ROLES table)
+-  Easy to modify attributes (add customer_tier)
+-  Clear ownership (customer data in CUSTOMERS only)
 
 ### Query Flexibility
-- ✅ Join any entities as needed
-- ✅ Filter on any attribute independently
-- ✅ Aggregate at any level
+-  Join any entities as needed
+-  Filter on any attribute independently
+-  Aggregate at any level
 
 ### Storage Efficiency
-- ✅ Minimal redundancy
-- ✅ Predictable growth
-- ✅ Efficient indexing
+-  Minimal redundancy
+-  Predictable growth
+-  Efficient indexing
 
 ---
