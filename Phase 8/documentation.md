@@ -1,4 +1,4 @@
-# Additional Documentation Package
+#  Documentation Package
 
 ---
 
@@ -7,32 +7,18 @@
 # Installation Guide
 ## Automated Customer Order Validation System
 
-**Author:** SHEJA RADAN BORIS (29096)  
-**Version:** 1.0  
-**Last Updated:** December 2024
+
 
 ---
 
 ## Prerequisites
 
 ### System Requirements
-- **Operating System:** Windows 10/11, macOS 10.15+, or Linux (Ubuntu 20.04+)
-- **RAM:** Minimum 4GB, Recommended 8GB
-- **Disk Space:** Minimum 1GB free space
-- **Database:** Oracle Database 19c or higher
-- **Client:** Oracle SQL Developer 20.2+ or SQL*Plus
-
-### Software Requirements
-1. **Oracle Database 19c Enterprise/Standard Edition**
-   - Download from: https://www.oracle.com/database/technologies/
-   - License: Development/Academic use
-
-2. **Oracle SQL Developer**
-   - Download from: https://www.oracle.com/tools/downloads/sqldev-downloads.html
-   - Version 20.2 or later
-
-3. **Git** (for repository cloning)
-   - Download from: https://git-scm.com/downloads
+- **Operating System:** Windows 11
+- **RAM:** 16GB
+- **Disk Space:** 250GB
+- **Database:** Oracle Database 21c
+- **Client:** Oracle SQL Developer
 
 ### User Permissions Required
 - CREATE TABLE
@@ -46,20 +32,7 @@
 
 ---
 
-## Installation Steps
 
-### Step 1: Clone Repository
-
-```bash
-# Using HTTPS
-git clone https://github.com/shejaradan/order-validation-system.git
-
-# Or using SSH
-git clone git@github.com:shejaradan/order-validation-system.git
-
-# Navigate to project directory
-cd order-validation-system
-```
 
 ### Step 2: Database Connection Setup
 
@@ -67,22 +40,20 @@ cd order-validation-system
 
 1. **Open SQL Developer**
 2. **Create New Connection**
-   - Connection Name: `OrderValidationSystem`
-   - Username: `your_username`
-   - Password: `your_password`
-   - Hostname: `localhost` (or your server IP)
+   - Connection Name: DB
+   - Username: `system`
+   - Password: `1234`
+   - Hostname: `localhost`
    - Port: `1521`
-   - Service Name: `ORCL` (or your database service)
+   - Service Name: `tue_29096_boris_acovs_db`
 3. **Test Connection** - Click "Test" button
 4. **Save & Connect**
 
 #### Option B: Using SQL*Plus
 
 ```bash
-# Connect to database
-sqlplus username/password@hostname:1521/ORCL
 
-# Or if local installation
+ local installation
 sqlplus username/password
 ```
 
@@ -113,9 +84,9 @@ FROM USER_TS_QUOTAS;
 
 ```sql
 -- In SQL Developer or SQL*Plus
-@database/scripts/01_create_tables.sql
-```
 
+```
+- [create_tables.sql](https://github.com/sboris123/plsql-RADAN-BORIS-SHEJA-FINAL-PROJECT-/blob/4b80a62893f855b2fcaaabd7c7aa0057905d523d/Phase%205/Create%20tables.sql)
 **Verification:**
 ```sql
 SELECT COUNT(*) AS table_count FROM USER_TABLES;
